@@ -1,0 +1,12 @@
+{
+  "name": "btc-dca-vault",
+  "version": "1.0.0",
+  "private": true,
+  "description": "BTC DCA Vault — Decentralized Dollar Cost Averaging on Bitcoin L1 via OP_NET",
+  "scripts": {
+    "dev": "cd frontend && npm run dev",
+    "build": "cd frontend && npm run build",
+    "install:all": "cd frontend && npm install",
+    "deploy": "ts-node scripts/deploy.ts"
+  }
+}

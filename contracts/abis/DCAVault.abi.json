@@ -1,0 +1,166 @@
+{
+    "functions": [
+        {
+            "name": "createVault",
+            "type": "Function",
+            "payable": false,
+            "onlyOwner": false,
+            "inputs": [
+                {
+                    "name": "scheduleType",
+                    "type": "UINT256"
+                },
+                {
+                    "name": "duration",
+                    "type": "UINT256"
+                },
+                {
+                    "name": "minDeposit",
+                    "type": "UINT256"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "vaultId",
+                    "type": "UINT256"
+                }
+            ]
+        },
+        {
+            "name": "deposit",
+            "type": "Function",
+            "payable": false,
+            "onlyOwner": false,
+            "inputs": [
+                {
+                    "name": "vaultId",
+                    "type": "UINT256"
+                },
+                {
+                    "name": "amount",
+                    "type": "UINT256"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "success",
+                    "type": "BOOL"
+                }
+            ]
+        },
+        {
+            "name": "executeDCA",
+            "type": "Function",
+            "payable": false,
+            "onlyOwner": false,
+            "inputs": [
+                {
+                    "name": "vaultId",
+                    "type": "UINT256"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "purchaseAmount",
+                    "type": "UINT256"
+                }
+            ]
+        },
+        {
+            "name": "withdraw",
+            "type": "Function",
+            "payable": false,
+            "onlyOwner": false,
+            "inputs": [
+                {
+                    "name": "vaultId",
+                    "type": "UINT256"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "amount",
+                    "type": "UINT256"
+                }
+            ]
+        },
+        {
+            "name": "getVaultCount",
+            "type": "Function",
+            "payable": false,
+            "onlyOwner": false,
+            "inputs": [],
+            "outputs": [
+                {
+                    "name": "count",
+                    "type": "UINT256"
+                }
+            ]
+        },
+        {
+            "name": "getVault",
+            "type": "Function",
+            "payable": false,
+            "onlyOwner": false,
+            "inputs": [
+                {
+                    "name": "vaultId",
+                    "type": "UINT256"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "scheduleType",
+                    "type": "UINT256"
+                },
+                {
+                    "name": "duration",
+                    "type": "UINT256"
+                },
+                {
+                    "name": "minDeposit",
+                    "type": "UINT256"
+                },
+                {
+                    "name": "totalDeposited",
+                    "type": "UINT256"
+                },
+                {
+                    "name": "totalPurchased",
+                    "type": "UINT256"
+                },
+                {
+                    "name": "nextExecutionBlock",
+                    "type": "UINT256"
+                }
+            ]
+        },
+        {
+            "name": "getUserPosition",
+            "type": "Function",
+            "payable": false,
+            "onlyOwner": false,
+            "inputs": [
+                {
+                    "name": "vaultId",
+                    "type": "UINT256"
+                },
+                {
+                    "name": "user",
+                    "type": "ADDRESS"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "deposited",
+                    "type": "UINT256"
+                },
+                {
+                    "name": "share",
+                    "type": "UINT256"
+                }
+            ]
+        }
+    ],
+    "events": []
+}

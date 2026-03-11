@@ -1,0 +1,22 @@
+{
+    "targets": {
+        "release": {
+            "outFile": "build/DCAVault.wasm",
+            "use": ["abort=src/index/abort"]
+        }
+    },
+    "options": {
+        "exportStart": "start",
+        "transform": "@btc-vision/opnet-transform",
+        "runtime": "stub",
+        "enable": [
+            "sign-extension",
+            "mutable-globals",
+            "nontrapping-f2i",
+            "bulk-memory",
+            "simd",
+            "reference-types",
+            "multi-value"
+        ]
+    }
+}
